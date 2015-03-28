@@ -64,4 +64,13 @@ public class CompressedLocation {
         return compressedLocation;
     }
 
+    /*
+     * Return location of compressed location.
+     *
+     * @return The location.
+     */
+    public Location getLocation() {
+        return this.location;
+    }
+
 }
