@@ -71,14 +71,14 @@ public abstract class Database {
      * Connects the data pool to the database.
      */
     public void connect() {
-
+        isConnected();
     }
 
     /*
      * Disconnects (shutdown) the data pool and all connections.
      */
     public void disconnect() {
-
+        dataSource.shutdown();
     }
 
     /*
