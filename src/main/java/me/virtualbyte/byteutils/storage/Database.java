@@ -20,7 +20,6 @@ public abstract class Database {
 
     private String           jdbcURL;
     private HikariDataSource dataSource;
-
     private JavaPlugin       plugin;
 
     /*
@@ -36,12 +35,9 @@ public abstract class Database {
         this.jdbcURL = jdbcURL;
         this.plugin = plugin;
 
-        try
-        {
+        try {
             Class.forName(className);
-        }
-        catch (ClassNotFoundException e)
-        {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
             return;
         }
@@ -57,12 +53,9 @@ public abstract class Database {
         config.setMaxLifetime(300000);
         config.setIdleTimeout(150000);
 
-        try
-        {
+        try {
             dataSource = new HikariDataSource(config);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
