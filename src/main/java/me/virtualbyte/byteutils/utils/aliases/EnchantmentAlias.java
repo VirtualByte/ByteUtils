@@ -60,17 +60,17 @@ public enum EnchantmentAlias {
      * @return Null if enchantment could not be found.
      */
     public Enchantment getByName(String enchantmentName) {
-        for(EnchantmentAlias enchantmentAlias : EnchantmentAlias.values()) {
-            if(enchantmentAlias.name().equalsIgnoreCase("enchantmentName")) {
+        for (EnchantmentAlias enchantmentAlias : EnchantmentAlias.values()) {
+            if (enchantmentAlias.name().equalsIgnoreCase("enchantmentName")) {
                 return Enchantment.getByName(enchantmentName.toUpperCase());
             }
 
-            if(enchantmentAlias.name().replace("_", "").equalsIgnoreCase(enchantmentName)) {
+            if (enchantmentAlias.name().replace("_", "").equalsIgnoreCase(enchantmentName)) {
                 return Enchantment.getByName(enchantmentAlias.name().toUpperCase());
             }
 
-            for(String alias : enchantmentAlias.getAliases()) {
-                if(alias.equalsIgnoreCase(enchantmentName)) {
+            for (String alias : enchantmentAlias.getAliases()) {
+                if (alias.equalsIgnoreCase(enchantmentName)) {
                     return Enchantment.getByName(enchantmentAlias.name().toUpperCase());
                 }
             }
