@@ -22,4 +22,22 @@ public class BlockUtils {
         ((CreatureSpawner) block.getState()).update(true, true);
     }
 
+    /*
+     * Get whether a string is a material.
+     *
+     * @param materialName Name of material to be checked.
+     * @return             True if the material is a name of a material.
+     */
+    public static boolean isMaterial(String materialName) {
+        try {
+            Material.valueOf(materialName);
+        } catch (IllegalArgumentException exception) {
+            return false;
+        } catch (NullPointerException exception) {
+            return false;
+        }
+
+        return true;
+    }
+
 }

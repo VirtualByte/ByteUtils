@@ -15,7 +15,7 @@ public enum EnchantmentAlias {
     ARROW_INFINITE("infinity", "unlimitedarrows", "arrowinfinite", "infinitearrows"),
     ARROW_KNOCKBACK("punch"),
     DAMAGE_ALL("sharpness", "sharp", "alldamage", "damage", "dmg"),
-    DAMAGE_ATHROPODS("baneofarthropods", "athdmg", "athropodsdamage", "athropoddamage", "athropod", "athropods"),
+    DAMAGE_ARTHROPODS("baneofarthropods", "arthdmg", "arthropodsdamage", "arthropoddamage", "arthropod", "arthropods"),
     DAMAGE_UNDEAD("undead", "undeaddamage", "smite", "unddeaddmg"),
     DIG_SPEED("digspeed", "efficiency", "minespeed", "cutspeed", "ds", "eff"),
     DURABILITY("unbreaking", "dura"),
@@ -59,9 +59,9 @@ public enum EnchantmentAlias {
      * @return Enchantment found.
      * @return Null if enchantment could not be found.
      */
-    public Enchantment getByName(String enchantmentName) {
+    public static Enchantment getByName(String enchantmentName) {
         for (EnchantmentAlias enchantmentAlias : EnchantmentAlias.values()) {
-            if (enchantmentAlias.name().equalsIgnoreCase("enchantmentName")) {
+            if (enchantmentAlias.name().equalsIgnoreCase(enchantmentName)) {
                 return Enchantment.getByName(enchantmentName.toUpperCase());
             }
 
