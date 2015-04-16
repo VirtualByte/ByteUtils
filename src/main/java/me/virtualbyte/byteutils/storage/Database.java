@@ -49,9 +49,8 @@ public abstract class Database {
         config.setUsername(username);
         config.setPassword(password);
 
-        config.setMaximumPoolSize(3);
-        config.setMaxLifetime(300000);
-        config.setIdleTimeout(150000);
+        config.setLeakDetectionThreshold(10000);
+        config.setMaximumPoolSize(10);
 
         try {
             dataSource = new HikariDataSource(config);

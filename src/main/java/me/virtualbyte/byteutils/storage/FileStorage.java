@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class FileStorage {
 
-    private File file;
+    private File              file;
     private FileConfiguration config;
 
     /*

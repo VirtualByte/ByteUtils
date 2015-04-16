@@ -18,7 +18,7 @@ public class MySQLDatabase extends Database {
      * @param plugin   Plugin for the schedulers to be assigned to.
      */
     public MySQLDatabase(String host, int port, String database, String username, String password, JavaPlugin plugin) {
-        super("com.mysql.jdbc.Driver", "jdbc:mysql://" + host + ": " + port + "/" + database, username, password, plugin);
+        super("com.mysql.jdbc.Driver", "jdbc:mysql://" + host + ":" + port + "/" + database, username, password, plugin);
     }
 
 }

@@ -3,6 +3,7 @@ package me.virtualbyte.byteutils.game;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +50,24 @@ public class Arena {
      */
     public List<Material> getCanBeBuilt() {
         return this.canBeBuilt;
+    }
+
+    /*
+     * Set what you can build on the map, canBuild must be true for this to have an effect.
+     *
+     * @param canBeBuilt What can be build/destroyed on the map/arena.
+     */
+    public void setCanBeBuilt(List<Material> canBeBuilt) {
+        this.canBeBuilt = canBeBuilt;
+    }
+
+    /*
+     * Set whether you can build on the arena.
+     *
+     * @param canBuild Can build on the map or not.
+     */
+    public void setCanBuild(boolean canBuild) {
+        this.canBuild = canBuild;
     }
 
     /*

@@ -27,13 +27,13 @@ public class CompressedItemStack {
     public CompressedItemStack(String compressedItem) {
         String[] itemVariables = compressedItem.split(":");
 
-        int item = Integer.valueOf(itemVariables[0]);
-        int data = Integer.valueOf(itemVariables[1]);
+        int item   = Integer.valueOf(itemVariables[0]);
+        int data   = Integer.valueOf(itemVariables[1]);
         int amount = Integer.valueOf(itemVariables[2]);
 
         String name = itemVariables[3].replaceAll("^\"|\"$", "");
 
-        List<String> lore         = new ArrayList<String>();
+        List<String>                  lore         = new ArrayList<String>();
         HashMap<Enchantment, Integer> enchantments = new HashMap<Enchantment, Integer>();
 
         for (int x = 4; x < itemVariables.length; x++) {
